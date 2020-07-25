@@ -2,15 +2,15 @@ const express = require("express");
 const path = require("path");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001
 
 app.use(express.urlencoded({
     extended:true
   }))
    app.use(express.json())
   
-   require("./apiroutes")(app);
-   require("./htmlroutes")(app);
+   require("./develop/public/assets/js/htmlroutes")(app);
+   require("./develop/public/assets/js/apiroutes")(app);
    
    
    
